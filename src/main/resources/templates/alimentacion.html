@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alimentacion</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/registro-usuarios-spring-security/src/main/resources/static/css/alimentacion.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Construye tu cuerpo</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Construye tu cuerpo</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a th:href="@{/Inicio}" class="nav-link active" aria-current="page" >Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#que somos">¿que somos?</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">buscar</button>
+                </form>
+
+                <span class="en">English</span>
+                <input type="checkbox" class="check">
+                <span class="es">Spanish</span>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Carrusel -->
+<div id="carouselExampleIndicators" class="carousel slide mt-5 pt-4" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../imagenes/chatarra.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Cuida tu alimentacion</h5>
+                <p>Es nuestra responsabilidad cuidar nuestro cuerpo comiendo saludable.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../imagenes/saludable2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>fortalece tu cuerpo </h5>
+                <p>La alimentacion es tan importante como lo es el ejercicio.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../imagenes/comer-bien.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>buena alimentacion </h5>
+                <p>Para mejorar tu cuerpo necesitas saber como nutrirlo.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
+<!-- Tarjetas -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="../imagenes/dieta-saludable.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Alimentate bien</h5>
+                    <p class="card-text">cuida de lo que comes y prepara tu dieta dependiendo de lo que necesites.</p>
+                    <a href="https://www.youtube.com/results?search_query=deficid+calorico+%2C+volumen+alimentacios" target="_blank" class="btn btn-primary">Prepara tu dieta</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="../imagenes/come mejor.jpg" target="_blank" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Aprende de lo que comes</h5>
+                    <p class="card-text">Es muy importante saber que comer y que no comer, aprte de saber por que es bueno o malo hacerlo.</p>
+                    <a href="https://www.youtube.com/results?search_query=aprende+lo+que+comes+" class="btn btn-primary">Averigua que debes comer</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="../imagenes/Articulo-alimentacion-para-niños.jpg" target="_blank" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Cuidate y cuida a quienes quieres</h5>
+                    <p class="card-text">Esta es una breve descripción de la tarjeta.</p>
+                    <a href="https://www.youtube.com/results?search_query=dietas+para+bajar+de+peso+desayuno+almuerzo+y+cena" class="btn btn-primary">prepara tus comidas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-center text-white mt-5">
+    <div class="items" id="que somos">
+        <h2>¿que somos?</h2>
+        <h5>  Una página web dedicada a proporcionar información sobre ejercicio es una herramienta invaluable para aquellos que buscan mejorar su salud y bienestar. Ofrece acceso a una variedad de recursos, como rutinas de ejercicios, consejos de entrenamiento,
+            videos instructivos y guías personalizadas. Esta plataforma permite a los usuarios aprender nuevas técnicas,
+            encontrar motivación y establecer metas de acondicionamiento físico, todo desde la comodidad de su hogar. Además,
+            puede ayudar a las personas a mantenerse activas, prevenir enfermedades relacionadas con el sedentarismo y mejorar su calidad de vida general.
+        </h5>
+
+
+        <div class="text-center p-3 bg-dark">
+            <a th:href="@{/Inicio}" ><button><h2>VOLVER</h2></button></a>
+        </div>
+        <div class="internacionalizar">
+            <a th:href="@{/English}" type="button"><button>English</button></a>
+        </div>
+        
+    </div>
+</footer>x
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+<script src="/registro-usuarios-spring-security/src/main/resources/static/js/internacional.js"></script>
+</body>
+</html>
